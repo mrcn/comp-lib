@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Columns, Section, Level, Form } from "react-bulma-components/full";
-// import { Navbar } from "react-bulma-components/full";
+import { Columns, Section, Level, Form, Heading } from "react-bulma-components/full";
+// eslint-disable-next-line
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+// eslint-disable-next-line
+import Routes from './Routes';
 
-class WebUserRegistrationScreen1 extends Component {
+class WebUserRegistrationS1 extends Component {
     render() {
         return (
             <Section>
+                <Heading size={1}>Account Registration - Screen 1</Heading> 
+
                 <Columns>
                     <Columns.Column size="one-third" offset="one-third">
                         <Form.Field>
@@ -90,9 +95,21 @@ class WebUserRegistrationScreen1 extends Component {
                         </Form.Field>
                     </Columns.Column>
                 </Columns>
+        
+                <Section>
+                    <Columns>
+                        <Columns.Column size="one-third" offset="one-third">
+                            <Level>
+                                <Link to="/">Save & Back</Link>
+                                <p>Exit</p>
+                                <Link to="/WebUserRegistrationS2">Save & Next</Link>
+                            </Level>
+                        </Columns.Column>
+                    </Columns>
+                </Section>
             </Section>
         )
     }
 }
 
-export default WebUserRegistrationScreen1;
+export default WebUserRegistrationS1;
